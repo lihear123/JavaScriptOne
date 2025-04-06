@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Eflyer</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--  -->
+    <!-- owl stylesheets -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesoeet" href="css/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style-one.css" />
+    <link rel="shortcut icon" href="images/banner-bg.png" type="image/x-icon" />
+    <style>
+      :root {
+        --primary-color: #8e44ad;
+        --secondary-color: #3498db;
+        --accent-color: #f39c12;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+      }
+
+      .section-title {
+        color: var(--primary-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        margin: 30px 0;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        border-radius: 2px;
+      }
+
+      .category-section {
+        padding: 40px 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .category-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          var(--primary-color),
+          var(--secondary-color),
+          var(--accent-color)
+        );
+      }
+
+      .product-card {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-bottom: 25px;
+        background-color: white;
+        border: none;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .product-img-container {
+        position: relative;
+        padding-top: 20px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, #f3f4f6, #ffffff);
+        overflow: hidden;
+      }
+
+      .product-img {
+        max-height: 180px;
+        max-width: 90%;
+        transition: transform 0.5s;
+      }
+
+      .product-card:hover .product-img {
+        transform: scale(1.08);
+      }
+
+      .product-title {
+        font-weight: 600;
+        margin-top: 15px;
+        color: var(--dark-color);
+      }
+
+      .product-price {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .price-label {
+        font-size: 0.8rem;
+        color: #7f8c8d;
+      }
+
+      .btn-cart {
+        background: linear-gradient(135deg, var(--primary-color), #9b59b6);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 8px 25px;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(142, 68, 173, 0.2);
+      }
+
+      .btn-cart:hover {
+        background: linear-gradient(135deg, #9b59b6, var(--primary-color));
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+      }
+
+      .btn-details {
+        background-color: transparent;
+        color: var(--dark-color);
+        border: 2px solid var(--secondary-color);
+        border-radius: 50px;
+        padding: 8px 25px;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .btn-details:hover {
+        background-color: var(--secondary-color);
+        color: white;
+      }
+
+      .cart-btn {
+        position: relative;
+        border: none;
+        background: transparent;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .badge-cart {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: var(--accent-color);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 600;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        border-radius: 15px;
+        border: none;
+        overflow: hidden;
+      }
+
+      .modal-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        border-bottom: none;
+      }
+
+      .modal-title {
+        font-weight: 700;
+      }
+
+      .modal-footer {
+        border-top: none;
+        padding: 1rem 1.5rem 1.5rem;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 20px;
+      }
+
+      .category-controls {
+        margin-top: 20px;
+      }
+
+      .form-select {
+        border-radius: 50px;
+        padding: 10px 20px;
+        border: 2px solid var(--light-color);
+      }
+
+      .btn-success {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        border: none;
+        border-radius: 50px;
+        padding: 10px 30px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+      }
+
+      .btn-success:hover {
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+      }
+
+      .btn-secondary {
+        background-color: #95a5a6;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 30px;
+        font-weight: 600;
+      }
+
+      .color-option {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+        cursor: pointer;
+        border: 2px solid #ecf0f1;
+      }
+
+      .color-option.active {
+        border: 2px solid var(--dark-color);
+      }
+
+      .size-option {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+        cursor: pointer;
+        border: 2px solid #ecf0f1;
+        font-weight: 600;
+        background-color: white;
+      }
+
+      .size-option.active {
+        background-color: var(--dark-color);
+        color: white;
+        border: 2px solid var(--dark-color);
+      }
+    </style>
+  </head>
+  sidenav
+  <body>
+    <!-- banner bg main start -->
+    <div id="topest" class="banner_bg_main fixed-skicky">
+      <!-- header top section start -->
+      <div class="container">
+        <div class="header_section_top">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="custom_menu">
+                <ul>
+                  <li><a href="#">Best Sellers</a></li>
+                  <li><a href="#">Gift Ideas</a></li>
+                  <li><a href="#">New Releases</a></li>
+                  <li><a href="#">Today's Deals</a></li>
+                  <li><a href="#">Customer Service</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header top section start -->
+      <!-- logo section start -->
+      <div class="logo_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo.png" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- logo section end -->
+      <!-- header section start -->
+      <div class="header_section">
+        <div class="container">
+          <div class="containt_main">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
+              <a href="#topest">Home</a>
+              <a href="#fashion">Fashion</a>
+              <a href="#electronics">Electronic</a>
+              <a href="#jewelry">Jewellery</a>
+            </div>
+            <span class="toggle_icon" onclick="openNav()"
+              ><img src="images/toggle-icon.png"
+            /></span>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                All Category
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="main">
+              <!-- Another variation with a button -->
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search this blog"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    style="background-color: #f26522; border-color: #f26522"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="header_box">
+              <div
+                class="lang_box d-flex align-items-center justify-content-center"
+                style="width: 150px"
+              >
+                <a
+                  href="#"
+                  title="Language"
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  <img
+                    src="images/flag-uk.png"
+                    alt="flag"
+                    class="mr-2"
+                    title="United Kingdom"
+                  />
+                  English
+                  <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">
+                    <img src="images/flag-france.png" class="mr-2" alt="flag" />
+                    French
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-5 ms-5">
+                <button
+                  class="btn border-0 bg-transparent position-relative"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cartModal"
+                >
+                  <i
+                    class="bi bi-cart-fill text-light"
+                    style="font-size: 20px"
+                  ></i>
+                  <span
+                    id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  >
+                </button>
+
+                <i class="fa fa-user" style="font-size: 20px"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- header section end -->
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+        <div class="container">
+          <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h1 class="banner_taital">
+                      Get Start <br />Your favriot shoping
+                    </h1>
+                    <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h1 class="banner_taital">
+                      Get Start <br />Your favriot shoping
+                    </h1>
+                    <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h1 class="banner_taital">
+                      Get Start <br />Your favriot shoping
+                    </h1>
+                    <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#my_slider"
+              role="button"
+              data-slide="prev"
+            >
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#my_slider"
+              role="button"
+              data-slide="next"
+            >
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- banner section end -->
+    </div>
+    <!-- banner bg main end -->
+    <!-- fashion section start -->
+    <!-- Fashion Section -->
+    <section id="fashion" class="container category-section mt-5">
+      <h2 class="section-title">Fashion Collection</h2>
+      <div class="row mt-4" id="fashionProducts">
+        <!-- Products will be loaded by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Electronics Section -->
+    <section id="electronics" class="container category-section">
+      <h2 class="section-title">Electronics</h2>
+      <div class="row mt-4" id="electronicsProducts">
+        <!-- Products will be loaded by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Jewelry Section -->
+    <section id="jewelry" class="container category-section">
+      <h2 class="section-title">Jewelry Collection</h2>
+      <div class="row mt-4" id="jewelryProducts">
+        <!-- Products will be loaded by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div
+      class="modal fade"
+      id="buyModal"
+      tabindex="-1"
+      aria-labelledby="buyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="buyModalLabel">Product Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <img
+                  id="modalProductImg"
+                  src=""
+                  class="img-fluid mb-3 rounded shadow"
+                  alt="Product Image"
+                  style="max-height: 300px"
+                />
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <span class="ms-2 text-muted">(4.5/5)</span>
+                </div>
+                <h5 id="modalProductName" class="fw-bold">Product Name</h5>
+                <p id="modalProductDesc">Product description</p>
+                <h4 class="text-primary">
+                  $<span id="modalProductPrice">0.00</span>
+                </h4>
+                <div class="mt-3 d-flex justify-content-center">
+                  <div class="quantity-control">
+                    <button
+                      class="quantity-btn btn-sm rounded-5 border-dark bg-warning"
+                      onclick="updateQuantity(-1)"
+                    >
+                      <i class="bi bi-dash"></i>
+                    </button>
+                    <input
+                      type="text"
+                      id="productQuantity"
+                      class="quantity-input w-25"
+                      value="1"
+                      readonly
+                    />
+                    <button class="quantity-btn" onclick="updateQuantity(1)">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div id="fashionOptions">
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Select Size</h6>
+                    <div class="d-flex flex-wrap">
+                      <button
+                        class="size-option active"
+                        onclick="selectSize(this, 'S')"
+                      >
+                        S
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectSize(this, 'M')"
+                      >
+                        M
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectSize(this, 'L')"
+                      >
+                        L
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectSize(this, 'XL')"
+                      >
+                        XL
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectSize(this, 'XXL')"
+                      >
+                        XXL
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Select Color</h6>
+                    <div class="d-flex">
+                      <span
+                        class="color-option active"
+                        style="background-color: #000"
+                        onclick="selectColor(this, 'Black')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #fff; border: 1px solid #ccc"
+                        onclick="selectColor(this, 'White')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #3498db"
+                        onclick="selectColor(this, 'Blue')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #e74c3c"
+                        onclick="selectColor(this, 'Red')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #2ecc71"
+                        onclick="selectColor(this, 'Green')"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Features</h6>
+                    <ul>
+                      <li>Premium Quality Material</li>
+                      <li>Comfortable Fit</li>
+                      <li>Easy Care, Machine Washable</li>
+                      <li>Perfect for Casual & Formal Wear</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="electronicsOptions">
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Select Storage</h6>
+                    <div class="d-flex flex-wrap">
+                      <button
+                        class="size-option active"
+                        onclick="selectStorage(this, '128GB')"
+                      >
+                        128GB
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectStorage(this, '256GB')"
+                      >
+                        256GB
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectStorage(this, '512GB')"
+                      >
+                        512GB
+                      </button>
+                      <button
+                        class="size-option"
+                        onclick="selectStorage(this, '1TB')"
+                      >
+                        1TB
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Select Color</h6>
+                    <div class="d-flex">
+                      <span
+                        class="color-option active"
+                        style="background-color: #000"
+                        onclick="selectColor(this, 'Black')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #fff; border: 1px solid #ccc"
+                        onclick="selectColor(this, 'White')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #95a5a6"
+                        onclick="selectColor(this, 'Silver')"
+                      ></span>
+                      <span
+                        class="color-option"
+                        style="background-color: #e67e22"
+                        onclick="selectColor(this, 'Gold')"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Select Warranty</h6>
+                    <select class="form-select" id="warrantySelect">
+                      <option value="1 Year" selected>1 Year Standard</option>
+                      <option value="2 Years">
+                        2 Years Extended (+$49.99)
+                      </option>
+                      <option value="3 Years">3 Years Premium (+$99.99)</option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Key Specifications</h6>
+                    <ul>
+                      <li>High-Performance Processor</li>
+                      <li>Advanced Cooling System</li>
+                      <li>Lightweight Design</li>
+                      <li>Extended Battery Life</li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="jewelryOptions">
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Material</h6>
+                    <div class="d-flex flex-wrap">
+                      <button
+                        class="feature-option active"
+                        onclick="selectMaterial(this, 'Gold')"
+                      >
+                        Gold
+                      </button>
+                      <button
+                        class="feature-option"
+                        onclick="selectMaterial(this, 'Silver')"
+                      >
+                        Silver
+                      </button>
+                      <button
+                        class="feature-option"
+                        onclick="selectMaterial(this, 'Rose Gold')"
+                      >
+                        Rose Gold
+                      </button>
+                      <button
+                        class="feature-option"
+                        onclick="selectMaterial(this, 'Platinum')"
+                      >
+                        Platinum
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Stone</h6>
+                    <div class="d-flex flex-wrap">
+                      <button
+                        class="feature-option active"
+                        onclick="selectStone(this, 'Diamond')"
+                      >
+                        Diamond
+                      </button>
+                      <button
+                        class="feature-option"
+                        onclick="selectStone(this, 'Ruby')"
+                      >
+                        Ruby
+                      </button>
+                      <button
+                        class="feature-option"
+                        onclick="selectStone(this, 'Sapphire')"
+                      >
+                        Sapphire
+                      </button>
+                      <button
+                        class="feature-option"
+                        onclick="selectStone(this, 'Emerald')"
+                      >
+                        Emerald
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h6 class="fw-bold">Features</h6>
+                    <ul>
+                      <li>Ethically Sourced Materials</li>
+                      <li>Handcrafted by Expert Artisans</li>
+                      <li>Includes Certificate of Authenticity</li>
+                      <li>Free Gift Packaging</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success" onclick="addToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="cartModalBody">
+            <p class="text-center">Your cart is empty.</p>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <div id="cartTotalContainer" class="d-none">
+              <div class="cart-total">
+                Total: $<span id="cartTotal">0.00</span>
+              </div>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-secondary me-2"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                id="checkoutBtn"
+                disabled
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast container -->
+    <div class="toast-container"></div>
+    <!-- footer section start -->
+    <div class="footer_section layout_padding">
+      <div class="container">
+        <div class="footer_logo">
+          <a href="index.html"><img src="images/footer-logo.png" /></a>
+        </div>
+        <div class="input_bt">
+          <input
+            type="text"
+            class="mail_bt"
+            placeholder="Your Email"
+            name="Your Email"
+          />
+          <span class="subscribe_bt" id="basic-addon2"
+            ><a href="#">Subscribe</a></span
+          >
+        </div>
+        <div class="footer_menu">
+          <ul>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Gift Ideas</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Today's Deals</a></li>
+            <li><a href="#">Customer Service</a></li>
+          </ul>
+        </div>
+        <div class="location_main">
+          Help Line Number : <a href="#">+1 1800 1200 1200</a>
+        </div>
+      </div>
+    </div>
+    <!-- footer section end -->
+    <!-- copyright section start -->
+    <div class="copyright_section">
+      <div class="container">
+        <p class="copyright_text">
+          © 2020 All Rights Reserved. Design by
+          <a href="https://html.design">Free html Templates</a>
+        </p>
+      </div>
+    </div>
+    <!-- copyright section end -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+      let currentProduct = {};
+      let selectedSize = "S";
+      let selectedColor = "Black";
+      let selectedStorage = "128GB";
+      let selectedMaterial = "Gold";
+      let selectedStone = "Diamond";
+      let cartItems = [];
+
+      // Product database
+      const products = {
+        fashion: [
+          {
+            id: "f1",
+            name: "Men's Premium T-Shirt",
+            description: "High-quality cotton with modern design",
+            price: 29.99,
+            image: "images/1img.png",
+            badge: "new",
+          },
+          {
+            id: "f2",
+            name: "Women's Elegant Blouse",
+            description: "Comfortable and stylish for any occasion",
+            price: 34.99,
+            image: "images/img1.png",
+            badge: "",
+          },
+          {
+            id: "f3",
+            name: "Denim Jacket",
+            description: "Classic denim with modern styling",
+            price: 59.99,
+            image: "images/img2.png",
+            badge: "sale",
+          },
+        ],
+        electronics: [
+          {
+            id: "e1",
+            name: "Premium Smartphone",
+            description: "High-performance with latest features",
+            price: 699.99,
+            image: "images/phone.png",
+            badge: "",
+          },
+          {
+            id: "e2",
+            name: "Gaming PC",
+            description: "High-end performance for ultimate gaming",
+            price: 1299.99,
+            image:
+              "https://static.vecteezy.com/system/resources/previews/044/861/285/non_2x/gaming-computer-case-isolated-png.png",
+            badge: "new",
+          },
+          {
+            id: "e3",
+            name: "Ultrabook Laptop",
+            description: "Lightweight and powerful for professionals",
+            price: 899.99,
+            image: "images/laptopuntra.png",
+            badge: "",
+          },
+        ],
+        jewelry: [
+          {
+            id: "j1",
+            name: "Gold Bracelet",
+            description: "Elegantly designed 18K gold bracelet",
+            price: 499.99,
+            image: "images/jewe1.png",
+            badge: "",
+          },
+          {
+            id: "j2",
+            name: "Diamond Earrings",
+            description: "Stunning diamond earrings for special occasions",
+            price: 799.99,
+            image: "images/jewe2.png",
+            badge: "new",
+          },
+          {
+            id: "j3",
+            name: "Silver Necklace",
+            description: "Delicate sterling silver necklace with pendant",
+            price: 199.99,
+            image: "images/jewe3.png",
+            badge: "",
+          },
+        ],
+      };
+
+      // Function to load products to the page
+      function loadProducts() {
+        // Load fashion products
+        const fashionContainer = document.getElementById("fashionProducts");
+        fashionContainer.innerHTML = "";
+        products.fashion.forEach((product) => {
+          fashionContainer.innerHTML += createProductCard(product, "fashion");
+        });
+
+        // Load electronics products
+        const electronicsContainer = document.getElementById(
+          "electronicsProducts"
+        );
+        electronicsContainer.innerHTML = "";
+        products.electronics.forEach((product) => {
+          electronicsContainer.innerHTML += createProductCard(
+            product,
+            "electronics"
+          );
+        });
+
+        // Load jewelry products
+        const jewelryContainer = document.getElementById("jewelryProducts");
+        jewelryContainer.innerHTML = "";
+        products.jewelry.forEach((product) => {
+          jewelryContainer.innerHTML += createProductCard(product, "jewelry");
+        });
+
+        // Add event listeners to all buy buttons
+        document.querySelectorAll(".buy-now-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const productId = this.getAttribute("data-id");
+            const category = this.getAttribute("data-category");
+            openProductModal(productId, category);
+          });
+        });
+      }
+
+      // Function to create product card HTML
+      function createProductCard(product, category) {
+        const badgeHtml = product.badge
+          ? `<span class="badge ${
+              product.badge === "sale" ? "bg-danger" : "bg-primary"
+            }">${product.badge.toUpperCase()}</span>`
+          : "";
+
+        return `
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <div class="product-image-container">
+                    <img src="${
+                      product.image
+                    }" class="card-img-top product-image" alt="${product.name}">
+                    ${badgeHtml}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title product-title">${product.name}</h5>
+                    <p class="card-text product-desc">${product.description}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="product-price">$${product.price.toFixed(
+                          2
+                        )}</span>
+                        <button class="btn btn-primary buy-now-btn" data-id="${
+                          product.id
+                        }" data-category="${category}">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+      }
+
+      // Function to open product modal
+      function openProductModal(productId, category) {
+        // Find the product
+        const product = products[category].find((p) => p.id === productId);
+        if (!product) return;
+
+        // Store current product globally
+        currentProduct = { ...product, category };
+
+        // Set modal content
+        document.getElementById("modalProductImg").src = product.image;
+        document.getElementById("modalProductName").textContent = product.name;
+        document.getElementById("modalProductDesc").textContent =
+          product.description;
+        document.getElementById("modalProductPrice").textContent =
+          product.price.toFixed(2);
+        document.getElementById("productQuantity").value = 1;
+
+        // Reset selection options
+        selectedSize = "S";
+        selectedColor = "Black";
+        selectedStorage = "128GB";
+        selectedMaterial = "Gold";
+        selectedStone = "Diamond";
+
+        // Show/hide appropriate options based on category
+        document.getElementById("fashionOptions").style.display =
+          category === "fashion" ? "block" : "none";
+        document.getElementById("electronicsOptions").style.display =
+          category === "electronics" ? "block" : "none";
+        document.getElementById("jewelryOptions").style.display =
+          category === "jewelry" ? "block" : "none";
+
+        // Reset active buttons
+        document
+          .querySelectorAll(".size-option, .color-option, .feature-option")
+          .forEach((button) => {
+            button.classList.remove("active");
+          });
+
+        // Set default active buttons
+        if (category === "fashion") {
+          document
+            .querySelector(".size-option:first-child")
+            .classList.add("active");
+          document
+            .querySelector(".color-option:first-child")
+            .classList.add("active");
+        } else if (category === "electronics") {
+          document
+            .querySelector("#electronicsOptions .size-option:first-child")
+            .classList.add("active");
+          document
+            .querySelector("#electronicsOptions .color-option:first-child")
+            .classList.add("active");
+        } else if (category === "jewelry") {
+          document
+            .querySelector(".feature-option:first-child")
+            .classList.add("active");
+        }
+
+        // Open modal
+        const buyModal = new bootstrap.Modal(
+          document.getElementById("buyModal")
+        );
+        buyModal.show();
+      }
+
+      // Function to update quantity in modal
+      function updateQuantity(change) {
+        const quantityInput = document.getElementById("productQuantity");
+        let quantity = parseInt(quantityInput.value) + change;
+        quantity = Math.max(1, quantity); // Ensure quantity is at least 1
+        quantityInput.value = quantity;
+      }
+
+      // Functions to select options in modal
+      function selectSize(element, size) {
+        document
+          .querySelectorAll(".size-option")
+          .forEach((btn) => btn.classList.remove("active"));
+        element.classList.add("active");
+        selectedSize = size;
+      }
+
+      function selectColor(element, color) {
+        document
+          .querySelectorAll(".color-option")
+          .forEach((btn) => btn.classList.remove("active"));
+        element.classList.add("active");
+        selectedColor = color;
+      }
+
+      function selectStorage(element, storage) {
+        document
+          .querySelectorAll("#electronicsOptions .size-option")
+          .forEach((btn) => btn.classList.remove("active"));
+        element.classList.add("active");
+        selectedStorage = storage;
+      }
+
+      function selectMaterial(element, material) {
+        document.querySelectorAll(".feature-option").forEach((btn) => {
+          if (btn.getAttribute("onclick").includes("selectMaterial")) {
+            btn.classList.remove("active");
+          }
+        });
+        element.classList.add("active");
+        selectedMaterial = material;
+      }
+
+      function selectStone(element, stone) {
+        document.querySelectorAll(".feature-option").forEach((btn) => {
+          if (btn.getAttribute("onclick").includes("selectStone")) {
+            btn.classList.remove("active");
+          }
+        });
+        element.classList.add("active");
+        selectedStone = stone;
+      }
+
+      // Function to add product to cart
+      function addToCart() {
+        if (!currentProduct || !currentProduct.id) return;
+
+        const quantity = parseInt(
+          document.getElementById("productQuantity").value
+        );
+        const warranty =
+          currentProduct.category === "electronics"
+            ? document.getElementById("warrantySelect").value
+            : null;
+
+        let options = {};
+        if (currentProduct.category === "fashion") {
+          options = { size: selectedSize, color: selectedColor };
+        } else if (currentProduct.category === "electronics") {
+          options = {
+            storage: selectedStorage,
+            color: selectedColor,
+            warranty,
+          };
+        } else if (currentProduct.category === "jewelry") {
+          options = { material: selectedMaterial, stone: selectedStone };
+        }
+
+        // Create cart item
+        const cartItem = {
+          id: Date.now().toString(), // Unique cart item ID
+          productId: currentProduct.id,
+          name: currentProduct.name,
+          price: currentProduct.price,
+          image: currentProduct.image,
+          quantity,
+          options,
+          category: currentProduct.category,
+          total: currentProduct.price * quantity,
+        };
+
+        // Add to cart
+        cartItems.push(cartItem);
+
+        // Update cart count
+        updateCartCount();
+
+        // Show success toast
+        showToast(`${cartItem.name} added to cart!`, "success");
+
+        // Close modal
+        const buyModal = bootstrap.Modal.getInstance(
+          document.getElementById("buyModal")
+        );
+        buyModal.hide();
+      }
+
+      // Function to update cart count
+      function updateCartCount() {
+        const cartCount = cartItems.reduce(
+          (total, item) => total + item.quantity,
+          0
+        );
+        document.getElementById("cartCount").textContent = cartCount;
+
+        // Enable or disable checkout button
+        document.getElementById("checkoutBtn").disabled = cartCount === 0;
+      }
+
+      // Function to show toast message
+      function showToast(message, type = "info") {
+        const toastContainer = document.querySelector(".toast-container");
+        const toastId = Date.now();
+
+        const toastHTML = `
+        <div id="toast-${toastId}" class="toast align-items-center text-white bg-${
+          type === "success" ? "success" : "primary"
+        }" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    ${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    `;
+
+        toastContainer.innerHTML += toastHTML;
+        const toastEl = document.getElementById(`toast-${toastId}`);
+        const toast = new bootstrap.Toast(toastEl, {
+          autohide: true,
+          delay: 3000,
+        });
+        toast.show();
+
+        // Remove toast from DOM after it's hidden
+        toastEl.addEventListener("hidden.bs.toast", function () {
+          toastEl.remove();
+        });
+      }
+
+      // Function to render cart items in modal
+      function renderCart() {
+        const cartModalBody = document.getElementById("cartModalBody");
+        const cartTotalContainer =
+          document.getElementById("cartTotalContainer");
+        const cartTotalElement = document.getElementById("cartTotal");
+
+        if (cartItems.length === 0) {
+          cartModalBody.innerHTML =
+            '<p class="text-center">Your cart is empty.</p>';
+          cartTotalContainer.classList.add("d-none");
+          return;
+        }
+
+        let cartHTML = '<div class="cart-items">';
+        let cartTotal = 0;
+
+        cartItems.forEach((item) => {
+          const itemTotal = item.price * item.quantity;
+          cartTotal += itemTotal;
+
+          let optionsText = "";
+          if (item.category === "fashion") {
+            optionsText = `Size: ${item.options.size}, Color: ${item.options.color}`;
+          } else if (item.category === "electronics") {
+            optionsText = `Storage: ${item.options.storage}, Color: ${item.options.color}, Warranty: ${item.options.warranty}`;
+          } else if (item.category === "jewelry") {
+            optionsText = `Material: ${item.options.material}, Stone: ${item.options.stone}`;
+          }
+
+          cartHTML += `
+            <div class="cart-item mb-3">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <img src="${
+                          item.image
+                        }" class="img-fluid rounded" alt="${item.name}">
+                    </div>
+                    <div class="col-6">
+                        <h6 class="mb-1">${item.name}</h6>
+                        <p class="small text-muted mb-1">${optionsText}</p>
+                        <div class="d-flex align-items-center">
+                            <span class="me-3">$${item.price.toFixed(2)} × ${
+            item.quantity
+          }</span>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" class="btn btn-outline-secondary" onclick="updateCartItem('${
+                                  item.id
+                                }', -1)">-</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="updateCartItem('${
+                                  item.id
+                                }', 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-end">
+                        <span class="fw-bold">$${itemTotal.toFixed(2)}</span>
+                    </div>
+                    <div class="col-1 text-end">
+                        <button class="btn btn-sm btn-link text-danger" onclick="removeCartItem('${
+                          item.id
+                        }')">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        });
+
+        cartHTML += "</div>";
+        cartModalBody.innerHTML = cartHTML;
+        cartTotalElement.textContent = cartTotal.toFixed(2);
+        cartTotalContainer.classList.remove("d-none");
+      }
+
+      // Function to update cart item quantity
+      function updateCartItem(itemId, change) {
+        const itemIndex = cartItems.findIndex((item) => item.id === itemId);
+        if (itemIndex === -1) return;
+
+        cartItems[itemIndex].quantity += change;
+
+        if (cartItems[itemIndex].quantity <= 0) {
+          // Remove item if quantity is 0 or less
+          removeCartItem(itemId);
+        } else {
+          // Update item total
+          cartItems[itemIndex].total =
+            cartItems[itemIndex].price * cartItems[itemIndex].quantity;
+          // Re-render cart
+          renderCart();
+          updateCartCount();
+        }
+      }
+
+      // Function to remove item from cart
+      function removeCartItem(itemId) {
+        cartItems = cartItems.filter((item) => item.id !== itemId);
+        renderCart();
+        updateCartCount();
+        showToast("Item removed from cart", "info");
+      }
+
+      // Event listeners
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load products
+        loadProducts();
+
+        // Initialize cart count
+        updateCartCount();
+
+        // Initialize cart modal event
+        const cartModal = document.getElementById("cartModal");
+        cartModal.addEventListener("show.bs.modal", function () {
+          renderCart();
+        });
+
+        // Style navbar based on scroll
+        const navbar = document.querySelector(".navbar");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add("navbar-scrolled");
+          } else {
+            navbar.classList.remove("navbar-scrolled");
+          }
+        });
+
+        // Initialize checkout button
+        document
+          .getElementById("checkoutBtn")
+          .addEventListener("click", function () {
+            alert("Checkout functionality would be implemented here.");
+            // Here you would normally redirect to a checkout page
+          });
+
+        // Smooth scrolling for navigation links
+        document
+          .querySelectorAll(".navbar-nav a.nav-link")
+          .forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute("href");
+              const targetElement = document.querySelector(targetId);
+
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop - 70,
+                  behavior: "smooth",
+                });
+
+                // Update active nav link
+                document
+                  .querySelectorAll(".navbar-nav .nav-link")
+                  .forEach((link) => {
+                    link.classList.remove("active");
+                  });
+                this.classList.add("active");
+
+                // Close mobile menu if open
+                const navbarCollapse =
+                  document.querySelector(".navbar-collapse");
+                if (navbarCollapse.classList.contains("show")) {
+                  navbarCollapse.classList.remove("show");
+                }
+              }
+            });
+          });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
